@@ -2,20 +2,8 @@
 #include "main.h"
 
 /**
- * main - Entry point
- *
- * Return: 0 (Success)
- */
-int main(void)
-{
-	print_alphabet();
-	return (0);
-}
-
-/**
- * print_alphabet - Entry point
- *
- * Return: no return Value
+ * print_alphabet - prints the english alphabet from a-z.
+ * Return: Nothing.
  */
 void print_alphabet(void)
 {
