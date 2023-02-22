@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include "main.h"
 /**
  * _islower - tests whether a character is a
  * lowercase letter from the English alphabet.
@@ -14,4 +15,10 @@ int islower()
 	else
 		return (0);
 
+}
+
+int main(void)
+{
+	vislower();
+	return (0);
 }
