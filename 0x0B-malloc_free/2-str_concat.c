@@ -1,44 +1,55 @@
-#include "main.h"
-#include <stdlib.h>
-#include <stddef.h>
+#include "holberton.h"
 
 /**
-* alloc_grid -> allocatingn 2d array
-* @width: width of an array
-* @height: height of an array
-* Return: a pointer to a allocated grid
-*/
-int **alloc_grid(int width, int height)
+ * _strlen - length of a string
+ * @s: input char
+ * Return: length of a string
+ */
+
+int _strlen(char *s)
 {
-	int i, j, k, l;
-	int **a;
+	int l = 0;
 
-	if (width <= 0 || height <= 0)
-		return (NULL);
-	a = malloc(height * sizeof(int *));
-	if (a == NULL)
+	while (*s != '\0')
 	{
-		free(a);
-		return (NULL);
+		s++;
+		l++;
 	}
-	for (i = 0; i < height; i++)
-	{
-		a[i] = malloc(width * sizeof(int));
-		if (a[i] == NULL)
-		{
-			for (j = i; j >= 0; j--)
-			{
-				free(a[j]);
-			}
-			free(a);
-			return (NULL);
-		}
-	}
+	return (l);
+}
 
-	for (k = 0; k < height; k++)
-	{
-		for (l = 0; l < width; l++)
-			a[k][l] = 0;
-	}
-	return (a);
+/**
+* str_concat - Concat 2 strings.
+* @s1: string
+* @s2: string
+* Return: char
+*/
+
+char *str_concat(char *s1, char *s2)
+{
+	unsigned int l1, l2;
+	char *conc, *tmp;
+
+	if (!s1)
+		s1 = "";
+	else
+		l1 = _strlen(s1);
+
+	if (!s2)
+		s2 = "";
+	else
+		l2 = _strlen(s2);
+
+	conc = malloc(l1 + l2 + 1);
+	if (!conc)
+		return (0);
+
+	tmp = conc;
+	while (*s1)
+		*tmp++ = *s1++;
+
+	while ((*tmp++ = *s2++))
+		;
+
+	return (conc);
 }
