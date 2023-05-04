@@ -29,7 +29,7 @@ listint_t *get_nodeint_at_index(listint_t *head, unsigned int index)
 	size_t size;
 	unsigned int x = 0;
 
-	size = listint_len(head);
+	size = listint_ln(head);
 
 	if (index > size)
 	{
