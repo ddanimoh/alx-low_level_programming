@@ -1,4 +1,4 @@
-#include "main.h"
+#include "lists.h"
 /**
  * add_nodeint_end - adding new node to the end of list
  * @head: point
@@ -17,7 +17,7 @@ listint_t *add_nodeint_end(listint_t **head, const int n)
 	}
 	add_node->n = n;
 
-	add_node->next NULL;
+	add_node->next = NULL;
 	if (*head == NULL)
 	{
 		*head = add_node;
