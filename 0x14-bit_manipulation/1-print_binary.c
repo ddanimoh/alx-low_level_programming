@@ -1,5 +1,4 @@
 #include "main.h"
-#include <stdio.h>
 /**
  * print_binary - funct to print binary
  * @a: Num to convert
