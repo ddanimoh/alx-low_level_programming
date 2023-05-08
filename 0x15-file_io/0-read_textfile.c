@@ -2,13 +2,13 @@
 /**
  * read_textfile - collect file input read function
  * @filename: a pointer
- * @letter: sixe of letter
+ * @letters: sixe of letter
  * Return: depends
  */
 ssize_t read_textfile(const char *filename, size_t letters)
 {
 	char *memo;
-	ssize_t read_func, write_func, open_func;
+	ssize_t read_fn, write_fn, open_fn;
 
 	if (filename == NULL)
 	{
@@ -22,16 +22,16 @@ ssize_t read_textfile(const char *filename, size_t letters)
 		return (0);
 	}
 
-	open_func = open(filename, O_RDONLY);
-	read_func = read(open_func, memo, letters);
-	write_func = write(STDOUT_FILENO, memo read_func);
+	open_fn = open(filename, O_RDONLY);
+	read_fn = read(open_fn, memo, letters);
+	write_fn = write(STDOUT_FILENO, memo read_fn);
 
 
-	if (read_func == -1 || write_func != read_func || write_func == -1 || open_func == -1)
+	if (read_fn == -1 || write_fn != read_fn || write_fn == -1 || open_fn == -1)
 	{
 		free(memo);
 		return (0);
 	}
 	free(memo);
-	return (write_func);
+	return (write_fn);
 }
