@@ -26,7 +26,7 @@ ssize_t read_textfile(const char *filename, size_t letters)
 
 	open_fn = open(filename, O_RDONLY);
 
-	if (read_fn == -1 || write_fn != read_fn || write_fn == -1 || open_fn == -1)
+	if (open_fn == -1)
 	{
 		free(memo);
 		return (0);
