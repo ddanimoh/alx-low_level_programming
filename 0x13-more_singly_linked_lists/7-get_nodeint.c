@@ -1,7 +1,7 @@
 #include "lists.h"
 
 /**
- * listint_len - funct
+ * listint_ln - funct
  * @s: argu
  * Return: number
  */
