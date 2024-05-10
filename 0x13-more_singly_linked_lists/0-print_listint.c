@@ -6,13 +6,14 @@
  */
 size_t print_listint(const listint_t *h)
 {
-	int node_total = 0;
+        int sum = 0;
 
-	while (h != NULL)
-	{
-		node_total++;
-		printf("%d\n", h->n);
-		h = h->next;
-	}
-	return (node_total);
+        while (h != NULL)
+        {
+                sum += 1;
+
+                printf("%d\n", h->n);
+                h = h->next;
+        }
+        return (sum);
 }
