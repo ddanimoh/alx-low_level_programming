@@ -1,19 +1,19 @@
+#include <stdio.h>
 #include "lists.h"
 /**
- * print_listint - print node value
- * @h: head to node
- * Return: nth of node
+ * print_listint - list all elem
+ * @h: to struct
+ * Return: lists
  */
 size_t print_listint(const listint_t *h)
 {
-	int sum = 0;
+	size_t node_count = 0;
 
 	while (h != NULL)
 	{
-		sum += 1;
-
 		printf("%d\n", h->n);
 		h = h->next;
+		node_count++;
 	}
-	return (sum);
+	return (node_count);
 }
